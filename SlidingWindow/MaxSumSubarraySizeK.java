@@ -2,10 +2,10 @@ package SlidingWindow;
 
 public class MaxSumSubarraySizeK {
     public static void main(String[] args) {
-        int[] arr = {10,20,1,3,-40,80,10};
-        int k = 3;
+        int[] arr = {100,200,300,400};
+        int k = 4;
         int n = arr.length;
-        int maxSum=0;
+//        int maxSum=0;
 //        for(int i=0;i<n-k+1;i++){
 //            int sum = 0;
 //            for(int j=i;j<=i+k-1;j++){
@@ -19,6 +19,7 @@ public class MaxSumSubarraySizeK {
             }
             i++;
             j++;
+            int maxSum = sum;
             while(j<n){
                 sum = sum-arr[i-1]+arr[j];
                 maxSum=Math.max(maxSum,sum);

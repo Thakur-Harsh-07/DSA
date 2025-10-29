@@ -8,8 +8,9 @@ public class InsertionSort {
         System.out.println();
     }
     public static void main(String[] args) {
-        int[] arr ={10,-4,20,4,8};
+        int[] arr ={5,1,3,2};
         int n = arr.length;
+//        int moves=0;
         print(arr);
         // Insertion Sort
         for(int i=1;i<n;i++){
@@ -18,10 +19,12 @@ public class InsertionSort {
                     int temp = arr[j];
                     arr[j]=arr[j-1];
                     arr[j-1] = temp;
+//                    moves++;
                 }
                 else break;
             }
         }
+//        System.out.println(moves);
         print(arr);
     }
 }

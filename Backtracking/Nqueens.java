@@ -6,7 +6,7 @@ public class Nqueens {
         char[][] board = new char[n][n];
         for(int i=0;i<n;i++){
             for (int j=0;j<n;j++){
-                board[i][j]='X';
+                board[i][j]='.';
             }
         }
         nQueen(board, 0);
@@ -28,7 +28,7 @@ public class Nqueens {
             if(isSafe(board,row,j)){
                 board[row][j] = 'Q';
                 nQueen(board,row+1);
-                board[row][j] = 'X'; // backtracking
+                board[row][j] = '.'; // backtracking
             }
         }
     }
